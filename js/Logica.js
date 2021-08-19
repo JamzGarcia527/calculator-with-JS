@@ -61,7 +61,7 @@ else if(x === "." && usarpunto === "si")
      if(operapendiente === "")
      {
          numespera=parseInt(document.getElementById("txtboxnros").value+=y);
-         parseInt(document.getElementById("txtboxnros").value=+y);
+        // parseInt(document.getElementById("txtboxnros").value=+y);
          operapendiente = y;
          pantallaconnumero = "";
          numpantalla = "";
