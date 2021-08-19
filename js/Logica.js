@@ -184,7 +184,7 @@ function donwloadCode()
         icon: 'alert',
         html:
           'Ok <b> Click </b> in this link -> ,  ' +
-          '<a href="//github.com/jamzgarcia/calculator-with-JS" target="_blank">Jamz PCs</a> ' +
+          '<a href="//github.com/jamzgarcia/calculator-with-JS" target="_blank">CODE HERE!</a> ' +
           'Good Day.',
         showCloseButton: true,
         showCancelButton: true,
