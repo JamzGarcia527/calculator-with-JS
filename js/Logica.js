@@ -177,6 +177,27 @@ function about()
         });
 }
 
+function donwloadCode()
+{
+    Swal.fire({
+        title: '<strong>how to download <u>this Code?</u></strong>',
+        icon: 'alert',
+        html:
+          'Ok <b> Click </b> in this link -> ,  ' +
+          '<a href="//github.com/jamzgarcia/calculator-with-JS" target="_blank">Jamz PCs</a> ' +
+          'Good Day.',
+        showCloseButton: true,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText:
+          '<i class="fa fa-thumbs-up"></i> Great!',
+        confirmButtonAriaLabel: 'Thumbs up, great!',
+        cancelButtonText:
+          '<i class="fa fa-thumbs-down"></i>',
+        cancelButtonAriaLabel: 'Thumbs down'
+        });
+}
+
 // funcion suma
 //function suma(){
     // let cambia de valor pero solo funciona en el bloque donde es ejecutada
