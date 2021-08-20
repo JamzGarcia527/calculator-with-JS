@@ -10,6 +10,7 @@ Esto es un comentario en HTML.
         <title>SENA JS - Repaso</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Hojas de estilos personalizadas --> 
         <link rel="stylesheet" href="css/styles.css" type="text/css">
         <link rel="stylesheet" href="sweetalert2.min.css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous"/>
@@ -71,7 +72,50 @@ Esto es un comentario en HTML.
                     </form>
                 </div>
             </div>
-        </div>        
+        </div>   
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <hr>
+                    <h3>nuevo contenido aca </h3>    
+                    <form class="numero">
+                        <label>Campo 1</label>
+                        <input type="number"  id="number1"/>
+                        <br>
+                        <label>Campo 2</label>
+                        <input type="number" id="number2" />
+                        <br>
+                        <br>
+                        <button onclick="suma()" type="button">Sumar</button>
+                        <button onclick="resta()" type="button">Restar</button>
+                    </form>
+                    <div id="resultado">
+                        
+                    </div>
+                    <br><br>
+                    <select id="elementos">                        
+                    </select>
+                    <button type="button" onclick="generarNumeros()">Generar Lista</button>
+                </div>
+                
+                <div class="col-sm-6">
+                    <hr>
+                    <form>
+                        <label>Actividades Favoritas</label>
+                        <input type="text" id="actividad" />
+                        <br>
+                        <button type="button" onclick="agregarActividad(event)">Agregar</button>
+                    </form>
+                    <div>
+                        <ul id="listaActividades"></ul>
+                    </div>
+                </div>
+                ´
+                <p>TAREA:: generar una aplicacion basica para generar la hoja de vida dinamica!! fotos y demas!! </p>
+                
+            </div>
+        </div>
         <script src="js/Logica.js"></script>
        <script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

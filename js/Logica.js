@@ -6,8 +6,9 @@
 
 /* global y */
 
-var num1;
-var num2;
+
+
+
 // cons no cambia su valor es una constante
 cons = 3.1416;
 
@@ -199,18 +200,62 @@ function donwloadCode()
 }
 
 // funcion suma
-//function suma(){
+function suma(){
+    
+    var mostrarResultado = document.getElementById("resultado");
+    var number1 = parseInt(document.getElementById("number1").value);
+    var number2 = parseInt(document.getElementById("number2").value);
     // let cambia de valor pero solo funciona en el bloque donde es ejecutada
-//    let resultado = num1 + num2;
-//    alert("la suma es = " + resultado);//
-//}
+    let resultado = number1 + number2;
+    alert("la suma es = "+resultado);    
+    mostrarResultado.innerHTML = "la suma es: "+resultado;
+    
+}
+// funcion resta
+function resta(){
+    
+    var mostrarResultado = document.getElementById("resultado");
+    var number1 = parseInt(document.getElementById("number1").value);
+    var number2 = parseInt(document.getElementById("number2").value);
+    resultado = number1 - number2;
+    alert("la resta es: "+ resultado);   
+    mostrarResultado.innerHTML = "la resta es: "+resultado; 
+   
+}
 
-//function resta (){
-//   numero1 = parseInt(document.getElementById("num1").value);
-//   numero2 = parseInt(document.getElementById("num2").value);
-//   resultado = numero1 - numero2;
-//   alert("la resta es: "+ resultado);//
-//}
+function aleatorio(min,max){
+    // floor funciona para seleccionar 1 solo elemento
+    return Math.floor(Math.random()* (max-min) + min);
+}
+
+function generarNumeros(){
+   
+    var elementos = document.getElementById("elementos");
+    var opcionesGeneradas="";
+    
+    for(var i = 0; i < 10; i++ )
+    {
+        opcionesGeneradas+="<option>"+ aleatorio(1,100) + "</option>";
+    }
+    elementos.innerHTML = opcionesGeneradas; 
+}
+
+function agregarActividad(evt){
+    evt.preventDefault();
+    var actividad = document.getElementById("actividad").value;
+    console.log(actividad);
+    if (actividad === "") {
+        alert("debe agregar una actividad");
+    }else{
+        var opcion = "<li>" + actividad + "</li>";
+        var lista = document.getElementById("listaActividades");
+        lista.innerHTML += opcion;        
+        alert("Se agrego una actividad");
+    }
+}
+
+
+
 
 
 
