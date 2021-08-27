@@ -42,12 +42,12 @@ and open the template in the editor.
                             <br>
                             <span class="input-group-text">Nombres & Apellidos</span>
                             <br>
-                            <input type="text" aria-label="First name" class="form-control" placeholder="Nombres">
+                            <input type="text" aria-label="First name" class="form-control" placeholder="Nombres" id="name">
                             <br>
-                            <input type="text" aria-label="Last name" class="form-control" placeholder="Apellidos">
+                            <input type="text" aria-label="Last name" class="form-control" placeholder="Apellidos" id="lastName">
                         </div>
                         <br>   
-                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="selectTypeDocument">
                             <option selected>Tipp de Documento de Identidad</option>
                             <option value="cc">Cédula Ciudadania</option>
                             <option value="ce">Cédula Extranjera</option>
@@ -57,24 +57,28 @@ and open the template in the editor.
                         <br>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">#</span>
-                            <input type="text" class="form-control" placeholder="Documento de Identidad" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="Documento de Identidad" aria-label="Username" aria-describedby="basic-addon1" id="documento">
                         </div>  
                         <br>
                         <div class="col-sm-6">
                             <h2 class="mb-2 text-center">Fecha de Nacimiento</h2>
                             <form action="#">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="pick-date" placeholder="Selecciona tu fecha">
+                                <input type="text" class="form-control" id="pick_date" placeholder="Selecciona tu fecha">
                             </div>
                             </form>
                         </div>
                           <br>
                         <div class="input-group mb-3">
                             <br>
-                            <input type="text" class="form-control" placeholder="Lugar de Nacimiento">
+                            <input type="text" class="form-control" placeholder="Lugar de Nacimiento" id="placeBritday">
                         </div>
 
-                        <button type="button" class="btn btn-primary text-center" id="button">Registar Datos</button>                      
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" onclick="agregarData(event)" data-toggle="modal" data-target="#exampleModal">
+                            Postularse
+                        </button>
+  
                     </form>
                 </div>
                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -85,6 +89,47 @@ and open the template in the editor.
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body" >
+                    
+                    <div id="data">
+                        
+                    </div>
+                    <h2>Ahora Ingrese Su Perfil Profesional</h2>
+                    <label>Perfil</label>
+                    <input type="text" id="perfil" />
+                    <br>
+                    <label>Herramientas como programador</label>
+                    <input type="text" id="herramientas" />
+                    <br>
+                    <label>Formacion Academica Primaria</label>
+                    <input type="text" id="primaria" />
+                    <label>Secundaria</label>
+                    <input type="text" id="secundaria" />
+                    <div id="listData">
+
+                    </div>
+                </div>
+                
+               
+
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">X</button>
+                <button type="button" class="btn btn-primary" onclick="agregarMoreData(event)">Guardar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+  
         <script src="js/cv.js"></script> 
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
